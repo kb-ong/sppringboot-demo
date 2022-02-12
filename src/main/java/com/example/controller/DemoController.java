@@ -13,7 +13,7 @@ public class DemoController {
     {
  
         // Print statement
-        return "Hello World!";
+        return "Hello World2!";
     }
 
 }
