@@ -9,11 +9,13 @@ public class DemoController {
 	
     @RequestMapping("/hello")
     // Method
-    public String helloWorld()
+    public String helloWorld(@RequestHeader Map<String, String> headers)
     {
  
         // Print statement
-        return "Hello World4!";
+    	StringBuilder sb=new StringBuilder();
+    	headers.entrySet().forEach(e->{ sb.append("key:"+e.getKey() + ",value:" + e.getValue() + "<br/>");});
+        return "Hello World!<br/>" + sb.toString();
     }
 
 }
